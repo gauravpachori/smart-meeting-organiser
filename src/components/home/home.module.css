@@ -1,0 +1,25 @@
+.home {
+    text-align: center;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.card {
+    width: 300px;
+    margin: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.card>div:first-child {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+}

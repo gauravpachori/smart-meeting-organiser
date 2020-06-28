@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+/**
+Use a better box model (opinionated).
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/**
+Use a more readable tab size (opinionated).
+*/
+
+:root {
+	-moz-tab-size: 4;
+	tab-size: 4;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+
+html {
+	line-height: 1.15; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/**
+Remove the margin in all browsers.
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-.App-link {
-  color: #61dafb;
+.button {
+	display: inline-block;
+	text-decoration: none;
+    width: 300px;
+    background-color: #000;
+    color: #fff;
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    outline: 0;
+    transition: 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button:hover {
+    background-color: #111;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+header {
+	padding: 15px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.err-screen {
+    padding: 25px;
+    text-align: center;
+    color: red;
 }
